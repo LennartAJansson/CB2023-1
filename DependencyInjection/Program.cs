@@ -6,9 +6,9 @@ using Microsoft.Extensions.Hosting;
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
-        _ = services.AddSingleton<ApplicationLayer>();
-        _ = services.AddTransient<DomainLayer>();
-        _ = services.AddTransient<ServiceLayer>();
+        _ = services.AddSingleton<IApplicationLayer, ApplicationLayer>();
+        _ = services.AddTransient<IDomainLayer, DomainLayer>();
+        _ = services.AddTransient<IServiceLayer, ServiceLayer>();
     })
     .Build();
 

@@ -74,3 +74,5 @@ public sealed class SingletonWaterproof
         }
     }
 }
+
+//Jon Skeet C# Programming Book
