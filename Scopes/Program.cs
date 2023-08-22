@@ -12,7 +12,6 @@ for (int loop = 1; loop <= 2; loop++)
 {
     using IServiceScope? scope = serviceProvider.CreateScope();
 
-    IServiceProvider? services = scope.ServiceProvider;
     Console.WriteLine($"Creating a new scope");
 
     Console.WriteLine($"\nCreating the first instances of our three services, loop {loop}");

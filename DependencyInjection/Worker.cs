@@ -12,8 +12,8 @@ public sealed class ApplicationLayer: IApplicationLayer
 
     public ApplicationLayer(ILogger<ApplicationLayer> logger, IDomainLayer domainLayer)
     {
-        logger.LogInformation("Creating applicationlayer");
         this.logger = logger;
+        this.logger.LogInformation("Creating applicationlayer");
         this.domainLayer = domainLayer;
     }
 }
@@ -28,8 +28,8 @@ public sealed class DomainLayer: IDomainLayer
 
     public DomainLayer(ILogger<DomainLayer> logger, IServiceLayer serviceLayer)
     {
-        logger.LogInformation("Creating domainlayer");
         this.logger = logger;
+        this.logger.LogInformation("Creating domainlayer");
         this.serviceLayer = serviceLayer;
     }
 }
@@ -43,7 +43,7 @@ public sealed class ServiceLayer:IServiceLayer
 
     public ServiceLayer(ILogger<ServiceLayer> logger)
     {
-        logger.LogInformation("Creating servicelayer");
         this.logger = logger;
+        this.logger.LogInformation("Creating servicelayer");
     }
 }

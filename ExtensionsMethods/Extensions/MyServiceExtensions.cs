@@ -1,4 +1,7 @@
-﻿namespace ExtensionsMethods;
+﻿namespace ExtensionsMethods.Extensions;
+
+using ExtensionsMethods.Interfaces;
+using ExtensionsMethods.Services;
 
 using Microsoft.Extensions.DependencyInjection;
 

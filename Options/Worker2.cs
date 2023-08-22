@@ -1,10 +1,11 @@
-﻿using System.Text.Json;
+﻿namespace Options;
+
+using System.Text.Json;
 
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-using Options;
 
 public sealed class Worker2 : BackgroundService
 {

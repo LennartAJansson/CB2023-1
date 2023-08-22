@@ -1,17 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using Singleton;
 
-using Singleton;
+SingletonSimple s1 = SingletonSimple.Instance;
+Console.WriteLine($"s1 instance id = {s1.InstanceId}");
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
-    {
-    })
-    .Build();
-
-using (IServiceScope scope = host.Services.CreateScope())
-{
-
-    SingletonSimple s = SingletonSimple.Instance;
-    SingletonSimple s2 = SingletonSimple.Instance;  
-}
+SingletonSimple s2 = SingletonSimple.Instance;
+Console.WriteLine($"s2 instance id = {s2.InstanceId}");

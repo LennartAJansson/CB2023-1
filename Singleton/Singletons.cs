@@ -2,6 +2,8 @@
 
 public sealed class SingletonSimple
 {
+    public Guid InstanceId { get; set; } = Guid.NewGuid();
+
     private static SingletonSimple? instance;
 
     private SingletonSimple()
@@ -12,21 +14,20 @@ public sealed class SingletonSimple
     {
         get
         {
-            if (instance == null)
-            {
-                instance = new SingletonSimple();
-            }
+            instance ??= new SingletonSimple();
 
             return instance;
         }
     }
 }
 
-public class SingletonMediumSafe
+public sealed class SingletonMediumSafe
 {
+    public Guid InstanceId { get; set; } = Guid.NewGuid();
+
     private static SingletonMediumSafe? instance;
-    private static readonly object lockObject = new object();
-    
+    private static readonly object lockObject = new();
+
     private SingletonMediumSafe()
     {
     }
@@ -37,10 +38,7 @@ public class SingletonMediumSafe
         {
             lock (lockObject)
             {
-                if (instance == null)
-                {
-                    instance = new SingletonMediumSafe();
-                }
+                instance ??= new SingletonMediumSafe();
             }
             return instance;
         }
@@ -49,8 +47,10 @@ public class SingletonMediumSafe
 
 public sealed class SingletonWaterproof
 {
+    public Guid InstanceId { get; set; } = Guid.NewGuid();
+
     private static SingletonWaterproof? instance;
-    private static readonly object lockObject = new object();
+    private static readonly object lockObject = new();
 
     private SingletonWaterproof()
     {
@@ -64,10 +64,7 @@ public sealed class SingletonWaterproof
             {
                 lock (lockObject)
                 {
-                    if (instance == null)
-                    {
-                        instance = new SingletonWaterproof();
-                    }
+                    instance ??= new SingletonWaterproof();
                 }
             }
             return instance;
