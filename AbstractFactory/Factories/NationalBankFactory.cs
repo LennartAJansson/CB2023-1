@@ -4,7 +4,7 @@ namespace AbstractFactory.Factories;
 
 using AbstractFactory.Interfaces;
 
-public class NationalCreditUnionFactory : ICreditUnionFactory
+public class NationalBankFactory : IAbstractBankFactory
 {
     public ILoanAccount CreateLoanAccount() => new NationalLoanAccount();
 

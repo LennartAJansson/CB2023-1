@@ -20,8 +20,8 @@ public class FactoryWorker1 : BackgroundService
         {
             logger.LogInformation("FactoryWorker1 running at: {time}", DateTimeOffset.Now);
 
-            INamedInstance i1 = factory.GetInstance(GetType().Name) ?? throw new NullReferenceException();
-            await i1.Execute("Hello from FactoryWorker1");
+            INamedInstance instance = factory.GetInstance(GetType().Name) ?? throw new NullReferenceException();
+            await instance.Execute("Hello from FactoryWorker1");
 
             await Task.Delay(2000, stoppingToken);
         }

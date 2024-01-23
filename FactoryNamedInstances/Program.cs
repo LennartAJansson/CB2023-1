@@ -12,11 +12,11 @@ public class Program
             .ConfigureServices(services =>
             {
                 _ = services.AddFactory<INamedInstance>(typeof(Program).Assembly);
-                
-                _ = services.AddHostedService<FactoryWorker1>();
-                _ = services.AddHostedService<FactoryWorker2>();
-                //_ = services.AddHostedService<NonFactoryWorker1>();
-                //_ = services.AddHostedService<NonFactoryWorker2>();
+
+              //_ = services.AddHostedService<FactoryWorker1>();
+              //_ = services.AddHostedService<FactoryWorker2>();
+              _ = services.AddHostedService<NonFactoryWorker1>();
+              _ = services.AddHostedService<NonFactoryWorker2>();
             })
             .Build();
 

@@ -5,15 +5,15 @@ using AbstractFactory.Interfaces;
 
 public class BankFactoryProvider
 {
-    public static ICreditUnionFactory? GetCreditUnionFactory(string accountNo)
+    public static IAbstractBankFactory? GetBankFactory(string accountNo)
     {
         if (accountNo.Contains("CITI")) 
         {
-            return new CitiCreditUnionFactory();
+            return new CitiBankFactory();
         }
         else if (accountNo.Contains("NATIONAL"))
         {
-            return new NationalCreditUnionFactory(); 
+            return new NationalBankFactory(); 
         }
         else
         {

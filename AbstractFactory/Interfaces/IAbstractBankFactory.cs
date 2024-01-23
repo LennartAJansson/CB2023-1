@@ -1,7 +1,7 @@
 ﻿namespace AbstractFactory.Interfaces
 {
     // Abstract Factory
-    public interface ICreditUnionFactory
+    public interface IAbstractBankFactory
     {
         public ISavingsAccount CreateSavingsAccount();
         public ILoanAccount CreateLoanAccount();

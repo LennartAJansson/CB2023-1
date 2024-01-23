@@ -5,6 +5,7 @@ public class ColorConsoleLogger : ILogger
     private readonly string name;
     private readonly Func<ColorConsoleLoggerConfiguration> getCurrentConfig;
     private readonly string[] text = { "trc ", "dbg ", "inf ", "wrn ", "err ", "crit", "none" };
+
     public ColorConsoleLogger(string name, Func<ColorConsoleLoggerConfiguration> getCurrentConfig) =>
         (this.name, this.getCurrentConfig) = (name, getCurrentConfig);
 

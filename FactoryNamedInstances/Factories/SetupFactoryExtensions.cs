@@ -30,11 +30,15 @@ public static class SetupFactoryExtensions
                 //Get all implementations for our T interface
                 foreach (Type? implementation in assembly.GetTypes().Where(t => t.GetInterfaces().Contains(typeof(T))))
                 {
+
 #pragma warning disable CS8603 // Possible null reference return.
+
                     //Register the implementation in the factory by using a lambda that will return the implementation
                     factory.Register(implementation.Name, () =>
                         sp.GetServices<T>().FirstOrDefault(s => s!.GetType().Name.Equals(implementation.Name)) ?? default);
+
 #pragma warning restore CS8603 // Possible null reference return.
+
                 }
             }
 

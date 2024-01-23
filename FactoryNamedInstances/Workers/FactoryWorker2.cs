@@ -22,8 +22,8 @@ public class FactoryWorker2 : BackgroundService
 
             //The name here could be controlled by configuration fx
             //These Namedinstances they will be new fresh each time
-            INamedInstance i1 = factory.GetInstance(GetType().Name) ?? throw new NullReferenceException();
-            await i1.Execute("Hello from FactoryWorker2");
+            INamedInstance instance = factory.GetInstance(GetType().Name) ?? throw new NullReferenceException();
+            await instance.Execute("Hello from FactoryWorker2");
 
             await Task.Delay(2000, stoppingToken);
         }

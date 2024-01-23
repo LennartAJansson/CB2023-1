@@ -19,8 +19,9 @@ public class NonFactoryWorker1 : BackgroundService
         {
             logger.LogInformation("NonFactoryWorker1 running at: {time}", DateTimeOffset.Now);
 
-            INamedInstance i1 = instances.First(i => i is NamedInstance1) ?? throw new ArgumentNullException();
-            await i1.Execute("Hello from NonFactoryWorker1");
+            INamedInstance instance = instances.First(i => i is NamedInstance1) ?? throw new ArgumentNullException();
+
+            await instance.Execute("Hello from NonFactoryWorker1");
 
             await Task.Delay(3000, stoppingToken);
         }
