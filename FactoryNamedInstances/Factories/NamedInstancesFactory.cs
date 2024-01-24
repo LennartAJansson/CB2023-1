@@ -15,11 +15,11 @@ public class NamedInstancesFactory<T>
         factories.Add(name, factory);
     }
 
-    public T? GetInstance(string worker)
+    public T? GetInstance(string name)
     {
-        string? name = configuration.GetSection("Workers")[worker] ??
-            throw new ArgumentException("Didn't find any configured worker instance for {worker}", worker);
+        string? worker = configuration.GetSection("Workers")[name] ??
+            throw new ArgumentException("Didn't find any configured worker instance for {worker}", name);
 
-        return factories.ContainsKey(name) ? factories[name]() : default;
+        return factories.ContainsKey(worker) ? factories[worker]() : default;
     }
 }

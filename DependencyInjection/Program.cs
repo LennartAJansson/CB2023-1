@@ -10,9 +10,10 @@ IHost host = Host.CreateDefaultBuilder(args)
         _ = services.AddTransient<IDomainLayer, DomainLayer>();
         _ = services.AddTransient<IServiceLayer, ServiceLayer>();
     })
+    
     .Build();
 
 using (IServiceScope scope = host.Services.CreateScope())
 {
-    ApplicationLayer applicationLayer = scope.ServiceProvider.GetRequiredService<ApplicationLayer>();
+    IApplicationLayer applicationLayer = scope.ServiceProvider.GetRequiredService<IApplicationLayer>();
 }

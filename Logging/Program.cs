@@ -6,12 +6,16 @@ using Microsoft.Extensions.Logging;
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
-      _ = services.AddLogging(builder => builder.SetMinimumLevel(LogLevel.Trace));
       _ = services.AddLogging(builder =>
       {
+        _ = builder.SetMinimumLevel(LogLevel.Trace);
         _ = builder.ClearProviders();
         _ = builder.SetMinimumLevel(LogLevel.Trace);
+
+        //Default logger
         _ = builder.AddConsole();
+        
+        //Our own logger
         //_ = builder.AddColorConsoleLogger(configuration =>
         //  {
         //    configuration.LogLevels.Add(LogLevel.Trace, ConsoleColor.DarkGray);

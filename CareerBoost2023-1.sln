@@ -19,17 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "Configurat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Configuration.Yaml", "Microsoft.Extensions.Configuration.Yaml\Microsoft.Extensions.Configuration.Yaml.csproj", "{53DCE393-55EB-4D26-ABC4-C339F7EAAAD8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.", "2.", "{5AD90505-59CE-40DC-9692-B7E50D4996A7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Dependency Injection", "2. Dependency Injection", "{5AD90505-59CE-40DC-9692-B7E50D4996A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.", "4.", "{BA73ABF7-722B-4E87-9B25-BEA7076125B3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Logging", "4. Logging", "{BA73ABF7-722B-4E87-9B25-BEA7076125B3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.", "3.", "{3CC41512-11FA-4B04-A910-D892C915853C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.", "5.", "{8A3581EA-788A-43D5-8444-2919B9B356C2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Configuration", "3. Configuration", "{3CC41512-11FA-4B04-A910-D892C915853C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Logging.ColorConsole", "Microsoft.Extensions.Logging.ColorConsole\Microsoft.Extensions.Logging.ColorConsole.csproj", "{A36FA6BB-4833-4D66-9909-C6BDA98E5FFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.", "1.", "{0D8B103C-45EF-45F9-B226-41BEF284670B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Patterns", "1. Patterns", "{0D8B103C-45EF-45F9-B226-41BEF284670B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{EF7DB86E-4C99-456A-9C78-ABCA7BC86A7A}"
 EndProject
@@ -39,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactorySample", "FactorySam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Singleton.csproj", "{65383EFF-3456-433B-8C6C-DCF4F6C56233}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSample", "EventSample\EventSample.csproj", "{14819514-B6FD-41AA-825B-ACAA055066D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSample", "EventSample\EventSample.csproj", "{14819514-B6FD-41AA-825B-ACAA055066D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

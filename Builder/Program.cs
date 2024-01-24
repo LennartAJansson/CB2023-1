@@ -3,10 +3,10 @@ using Builder.Factories;
 using Builder.Items;
 
 List<CarBuilder> builders = new() { new SuperCarBuilder(), new NotSoSuperCarBuilder() };
+CarFactory factory = new();
 
 foreach (CarBuilder builder in builders)
 {
-    CarFactory factory = new();
     Car car = factory.Build(builder);
     Console.WriteLine($"The car requested by {builder.GetType().Name}:");
     Console.WriteLine($"------------------------------------------");

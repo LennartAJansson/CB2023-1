@@ -15,7 +15,7 @@ public sealed class SingletonWaterproof
     {
         get
         {
-            if (instance == null)
+            if (instance is null)
             {
                 lock (lockObject)
                 {
